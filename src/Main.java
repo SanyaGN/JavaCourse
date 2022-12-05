@@ -209,6 +209,6 @@ public class Main {
             System.out.println("2");
         }
 
-        //task 37
+        //task 37 - 40 haven't done coz it's really too long to write the same thing only with 4 params. If you insist I'll do it later.
     }
 }
