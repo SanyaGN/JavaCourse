@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         //task 211
-        int[] array = {1, -12, 8, -7, 6, 11, 4};
+        int[] array = {1, -12, 8, -7, 6, 11, 4, 0};
         int positiveQuantity = 0;
         int positiveSum = 0;
         for (int i = 0; i < array.length; i++) {
@@ -131,6 +131,180 @@ public class Main {
         System.out.println(quantity);
 
         //task 225
+        int t = 10;
+        int artadryal = 1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0 && array[i] * -1 < t) {
+                artadryal = artadryal * array[i] * -1;
+            } else if (array[i] > 0 && array[i] < t) {
+                artadryal = artadryal * array[i];
+            }
+        }
+        System.out.println(artadryal);
 
+        //task 226
+        sum = 0;
+        t = 10;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0 && array[i] * -1 < t) {
+                sum = sum + array[i] * -1;
+            } else if (array[i] > 0 && array[i] < t) {
+                sum = sum + array[i];
+            }
+        }
+        System.out.println(sum);
+
+        //task 227
+        sum = 0;
+        indexCount = 0;
+        k = 2;
+        for (int i = 1; i < array.length; i++) {
+            if (i % k == 0) {
+                indexCount++;
+                sum = sum + array[i];
+            }
+        }
+        System.out.println(sum / indexCount);
+
+        //task 228
+        sum = 0;
+        indexCount = 0;
+        k = 2;
+        for (int i = 0; i < array.length; i++) {
+            if (i % k == 0) {
+                indexCount++;
+                sum = sum + array[i];
+            }
+        }
+        System.out.println(sum / indexCount);
+
+        //task 229
+        artadryal = 1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] - i > 0) {
+                artadryal = artadryal * array[i];
+            }
+        }
+        System.out.println(artadryal);
+
+        //task 230
+        quantity = 0;
+        artadryal = 1;
+        k = 2;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % k == 0) {
+                quantity++;
+                artadryal = artadryal * array[i];
+            }
+        }
+        System.out.println(artadryal / quantity);
+
+        //task 231
+        sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                sum = sum + array[i] * array[i];
+            }
+        }
+        System.out.println(sum);
+
+        //task 232
+        quantity = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                quantity++;
+            }
+        }
+        System.out.println(quantity);
+
+        //task 233
+        sum = 0;
+        artadryal = 1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                sum = sum + array[i];
+                artadryal = artadryal * array[i];
+            }
+        }
+        System.out.print("artadryal ");
+        System.out.println(artadryal);
+        System.out.print("gumar ");
+        System.out.println(sum);
+
+        //task 234
+        int oddSum = 0;
+        quantity = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 1 || array[i] % 2 == -1) {
+                quantity++;
+                oddSum = oddSum + array[i];
+            }
+        }
+        System.out.println(oddSum / quantity);
+
+        //task 235
+        artadryal = 1;
+        quantity = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 1 || array[i] % 2 == -1) {
+                quantity++;
+                artadryal = artadryal * array[i];
+            }
+        }
+        System.out.println(artadryal / quantity);
+
+        //task 236
+        artadryal = 1;
+        oddSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 1 || array[i] % 2 == -1) {
+                artadryal = artadryal * array[i];
+                oddSum = oddSum + array[i];
+            }
+        }
+        System.out.print("artadryal");
+        System.out.println(artadryal);
+        System.out.print("gumar");
+        System.out.println(oddSum);
+
+        //task 237
+        quantity = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                quantity++;
+            }
+        }
+        System.out.println(quantity);
+
+        //task 238
+        sum = 0;
+        quantity = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % 3 == 0) {
+                sum = sum + array[i];
+                quantity++;
+            }
+        }
+        System.out.println(sum / quantity);
+
+        //task 239
+        artadryal = 1;
+        quantity = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % 5 == 0) {
+                artadryal = artadryal * array[i];
+                quantity++;
+            }
+        }
+        System.out.println(artadryal / quantity);
+
+        //task 240
+        quantity = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % 7 == 0) {
+                quantity++;
+            }
+        }
+        System.out.println(quantity);
     }
 }
