@@ -1,15 +1,22 @@
+import service.CatService;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("");
+        CatService catService = new CatService();
 
-        int x = 7;
+        // cat with max age
+        catService.catWithMaxAge();
 
-        if (x==7) {
-            System.out.println("mi tesak en chi sax");
-        } else if (x>=0) {
-            System.out.println("ay esi tpi");
-        } else if (x<0) {
-            System.out.println("minusavoya");
-        } else System.out.println("500 error");
+        //cat with min age
+        catService.catWithMinAge();
+
+        //cat with min weight
+        catService.catWithMinWeight();
+
+        //cat with max weight
+        catService.catWithMaxWeight();
+
+        //pet with min age
+        catService.petWithMinAge();
     }
 }
