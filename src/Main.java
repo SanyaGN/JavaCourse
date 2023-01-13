@@ -1,22 +1,46 @@
-import service.CatService;
-
 public class Main {
+
+    int arajin = 0;
+    int hajord = 1;
+    int tiv = 0;
+
     public static void main(String[] args) {
-        CatService catService = new CatService();
+        Main main = new Main();
+        System.out.println(main.fibonacciNumber(10));
+        main.fibonacciNumber1(10);
+    }
 
-        // cat with max age
-        catService.catWithMaxAge();
+    //  solved with recursion
+    public int fibonacciNumber(int index) {
+        if (index < 0) {
+            System.out.println("Fibonacci number should be positive");
+        } else if (index == 0) {
+            tiv = 0;
+        } else if (index == 1) {
+            tiv = 1;
+        } else {
+            fibonacciNumber(index - 1);
+            tiv = arajin + hajord;
+            arajin = hajord;
+            hajord = tiv;
+        }
+        return tiv;
+    }
 
-        //cat with min age
-        catService.catWithMinAge();
-
-        //cat with min weight
-        catService.catWithMinWeight();
-
-        //cat with max weight
-        catService.catWithMaxWeight();
-
-        //pet with min age
-        catService.petWithMinAge();
+    // solved with for
+    public void fibonacciNumber1(int index) {
+        if (index == 0 || index == 1) {
+            System.out.println("1");
+        } else if (index > 0) {
+            int[] arrayFibonacci = new int[index + 1];
+            arrayFibonacci[0] = 0;
+            arrayFibonacci[1] = 1;
+            for (int i = 2; i < arrayFibonacci.length; i++) {
+                arrayFibonacci[i] = arrayFibonacci[i - 1] + arrayFibonacci[i - 2];
+            }
+            System.out.println(arrayFibonacci[index]);
+        } else {
+            System.out.println("Fibonacci number should be positive");
+        }
     }
 }
