@@ -1,22 +1,26 @@
 package model;
 
-public class Students {
+public class Students implements Comparable<Students> {
     private String name;
-    private int age;
+    private int mark;
+
+    public Students(String stringFromFile) {
+        String[] split = stringFromFile.split("-");
+        this.name = split[0];
+        this.mark = Integer.parseInt(split[1]);
+    }
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
+    @Override
+    public int compareTo(Students o) {
+        return this.mark - o.mark;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    @Override
+    public String toString() {
+        return name + ": " + mark;
     }
 }
